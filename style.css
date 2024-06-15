@@ -1,0 +1,405 @@
+/* ######### google font link ############### */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ################# main page styling Start ###################### */
+.mainPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background: url(./img/main\ bg.jpeg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainPage .headingArea {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 15px;
+}
+.mainPage .headingArea h1 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 500;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.mainPage .headingArea p {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.mainPage .buttonArea {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mainPage .buttonArea a {
+  width: 250px;
+  height: 50px;
+  margin-left: 30px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.mainPage .buttonArea a:hover {
+  background-color: #fff;
+  color: #000;
+}
+.mainPage .buttonArea a:active {
+  transform: scaleY(60%);
+}
+.buttonArea #loginPage {
+  background: #fff;
+  color: #000;
+  transition: 0.3s ease-in-out;
+}
+.buttonArea #loginPage:hover {
+  background-color: transparent;
+  color: #fff;
+}
+/* #################### Main page styling End ####################### */
+
+/* ******************************************************************* */
+
+/* ############################ Signup Page Styling Start ########################## */
+
+.SignupPage {
+  width: 100%;
+  background: url(./img/main\ bg.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+.SignupPage .formSide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.SignupPage .formSide h2 {
+  font-size: 42px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.SignupPage .formSide p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 5%;
+}
+.formSide form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+.formSide form .inputBox {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  position: relative;
+}
+.formSide form .inputBox label,
+span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+form .inputBox input {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0;
+  padding: 0 10px;
+  font-size: 17px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  color: #fff;
+  font-weight: 500;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+.inputBox input::placeholder {
+  color: #ccc;
+}
+form .inputBox input:focus {
+  border: 1px solid #fefefe;
+  box-shadow: 0 0 10px #fefefe;
+}
+.inputBox i {
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  cursor: pointer;
+}
+.inputBox #userPic {
+  display: none;
+}
+.inputBox .profilePic {
+  border: 1px dashed #aaa;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.formSide form .buttonBox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+form .buttonBox a {
+  width: 50%;
+  height: 45px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .buttonBox a:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+form .buttonBox #userLogin {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+form .buttonBox #userLogin:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ############################ Signup Page Styling End ########################## */
+
+/* ################################################################################# */
+
+/* ############################ Login Page Styling Start ########################## */
+
+.loginPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: url(./img/main\ bg.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 20px;
+}
+.loginPage .textArea,
+.loginPage .formArea {
+  width: 50%;
+}
+.loginPage .textArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.loginPage .textArea h2 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.loginPage .textArea p {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+}
+.loginPage .formArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.loginPage .formArea form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.formArea form .inputBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 3px;
+  position: relative;
+}
+.formArea form .inputBox label {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+form .inputBox #eye {
+  position: absolute;
+  top: 51px;
+  right: 15px;
+}
+form .buttonBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 40px;
+}
+.buttonBox p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.buttonBox #returnSignup {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.buttonBox #returnSignup:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ################################### media query ################################# */
+
+/* ################# for signup ##################### */
+
+@media (max-width: 760px) {
+  .SignupPage .formSide h2 {
+    font-size: 33px;
+    text-align: center;
+  }
+  .SignupPage .formSide p {
+    font-size: 13px;
+    text-align: center;
+  }
+  .formSide form {
+    align-items: flex-start;
+  }
+  .formSide form .inputBox {
+    width: 100%;
+  }
+  .formSide form .inputBox input {
+    height: 50px;
+    font-size: 15px;
+  }
+  .formSide form .inputBox .profilePic {
+    margin-left: 0px;
+  }
+  .formSide form .buttonBox {
+    width: 100%;
+    align-self: center;
+  }
+  .inputBox i {
+    right: 10px;
+    top: 45px;
+    font-size: 17px;
+  }
+  /* ################## for login Page ################## */
+  .loginPage .textArea,
+  .loginPage .formArea {
+    width: 100%;
+  }
+  .loginPage .textArea h2 {
+    font-size: 30px;
+  }
+  .loginPage .textArea p {
+    font-size: 18px;
+  }
+  .formArea form .inputBox #eye {
+    top: 55px;
+    font-size: 20px;
+  }
+}
+
+/* ################### main Page Media query ################### */
+
+@media (max-width: 430px) {
+  .mainPage .headingArea {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
