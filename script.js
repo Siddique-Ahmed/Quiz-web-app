@@ -295,6 +295,9 @@ function userLogin() {
 
   if (userFound) {
     swal.fire("Login Successfull");
+    setTimeout(() => {
+      document.location.href = "quiz.html";
+    }, 1700);
   } else {
     Swal.fire("Invalid email or password!");
   }
