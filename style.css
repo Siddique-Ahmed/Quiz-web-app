@@ -21,7 +21,7 @@ body {
 .mainPage {
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -59,18 +59,17 @@ body {
 .mainPage .buttonArea {
   display: flex;
   width: 100%;
-  height: 30%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
-.mainPage .buttonArea a {
+.mainPage .buttonArea button {
   width: 250px;
   height: 50px;
-  margin-left: 30px;
   font-size: 19px;
   font-weight: 600;
   color: #fff;
+  margin-bottom: 20px;
   background: transparent;
   border-radius: 10px;
   outline: none;
@@ -82,11 +81,11 @@ body {
   justify-content: center;
   text-decoration: none;
 }
-.mainPage .buttonArea a:hover {
+.mainPage .buttonArea button:hover {
   background-color: #fff;
   color: #000;
 }
-.mainPage .buttonArea a:active {
+.mainPage .buttonArea button:active {
   transform: scaleY(60%);
 }
 .buttonArea #loginPage {
@@ -110,11 +109,24 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 50px 20px;
+  animation: signPage 0.3s ease-in-out forwards;
+  transition: 0.3s ease-in-out;
+}
+@keyframes signPage {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 .SignupPage .formSide {
   width: 100%;
@@ -188,7 +200,7 @@ form .inputBox input:focus {
   color: #fff;
   position: absolute;
   right: 10px;
-  top: 45px;
+  top: 46px;
   cursor: pointer;
 }
 .inputBox #userPic {
@@ -214,7 +226,7 @@ form .inputBox input:focus {
   flex-wrap: wrap;
   padding: 10px 0;
 }
-form .buttonBox a {
+form .buttonBox button {
   width: 50%;
   height: 45px;
   text-decoration: none;
@@ -232,17 +244,17 @@ form .buttonBox a {
   align-items: center;
   justify-content: center;
 }
-form .buttonBox a:hover {
+form .buttonBox button:hover {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
 }
-form .buttonBox #userLogin {
+form .buttonBox #logPage {
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
 }
-form .buttonBox #userLogin:hover {
+form .buttonBox #logPage:hover {
   background-color: #fff;
   color: #000;
 }
@@ -265,6 +277,19 @@ form .buttonBox #userLogin:hover {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 20px;
+  animation: logPage 0.3s ease-in-out forwards;
+  transition: 0.3s ease-in-out;
+}
+@keyframes logPage {
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 .loginPage .textArea,
 .loginPage .formArea {
@@ -317,7 +342,7 @@ form .buttonBox #userLogin:hover {
 }
 form .inputBox #eye {
   position: absolute;
-  top: 51px;
+  top: 53px;
   right: 15px;
 }
 form .buttonBox {
@@ -327,6 +352,24 @@ form .buttonBox {
   align-items: center;
   gap: 4px;
   margin-top: 40px;
+}
+form .buttonBox button{
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  outline: none;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 17px;
+  font-weight: 600;
+}
+.buttonBox button:hover{
+  background: transparent;
+  color: #fff;
 }
 .buttonBox p {
   font-size: 16px;
@@ -363,7 +406,7 @@ form .buttonBox {
     width: 100%;
   }
   .formSide form .inputBox input {
-    height: 50px;
+    height: 65px;
     font-size: 15px;
   }
   .formSide form .inputBox .profilePic {
@@ -373,15 +416,19 @@ form .buttonBox {
     width: 100%;
     align-self: center;
   }
+  form .buttonBox button{
+    width: 70%;
+  }
   .inputBox i {
     right: 10px;
-    top: 45px;
-    font-size: 17px;
+    top: 47px;
+    font-size: 27px;
   }
   /* ################## for login Page ################## */
   .loginPage .textArea,
   .loginPage .formArea {
     width: 100%;
+    text-align: center;
   }
   .loginPage .textArea h2 {
     font-size: 30px;
@@ -390,8 +437,7 @@ form .buttonBox {
     font-size: 18px;
   }
   .formArea form .inputBox #eye {
-    top: 55px;
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 
@@ -401,5 +447,13 @@ form .buttonBox {
   .mainPage .headingArea {
     padding: 0 10px;
     text-align: center;
+  }
+  .mainPage .headingArea h1{
+    font-size: 25px;
+    line-height: 1.4;
+  }
+  .mainPage .headingArea p{
+    font-size: 13px;
+    line-height: 1.5;
   }
 }
