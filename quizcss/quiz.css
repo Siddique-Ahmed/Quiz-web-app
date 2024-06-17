@@ -673,3 +673,22 @@ body #loader{
   color: #fff;
   border: 1px solid #fff;
 }
+
+
+
+
+
+
+/* ###################### media query ############################## */
+
+@media (max-width: 710px) {
+  body #loader{
+    display: none;
+    left: 46%;
+  }
+}
+@media (max-width: 380px) {
+  body #loader{
+    left: 43%;
+  }
+}
