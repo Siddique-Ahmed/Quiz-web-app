@@ -3,27 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QUiz || APP</title>
+    <title>QUIZ || APP</title>
     <link rel="icon" href="./img/main bg.jpeg" />
     <!-- ############### font awesome link ############### -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    <link rel="stylesheet" href="./quizcss/quiz.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./quizcss/quiz.css" />
   </head>
   <body>
+    <div id="loader"></div>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>QUIZ APP</h1>
+      </div>
+      <ul class="login">
+        <li class="profile-pic"></li>
+        <li class="logout">
+          <ul>
+            <li><a id="logoutBtn" href="./index.html">LOGOUT</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-<section class="startQuiz">
-  <h1>Start Quiz </h1>
-  <button id="startQuiz">Start</button>
+    <section class="startQuiz">
+      <h1>Start Quiz</h1>
+      <button id="startQuiz">Start</button>
+    </section>
+    <!-- ################### selection section #################### -->
+    <section class="selectSection">
+      <div class="textArea">
+        <h1>Select Quiz</h1>
+      </div>
+      <div class="buttons">
+        <button id="HTML">HTML</button>
+        <button id="CSS">CSS</button>
+        <button id="JAVASCRIPT">JAVASCRIPT</button>
+        <button id="PHP">PHP</button>
+        <button id="PYTHON">PYTHON</button>
+      </div>
+    </section>
+<!-- ##################### HTML QUIZ ################### -->
+
+<section class="htmlSection">
+  <div class="sectionHeading">
+    <h1>HTML QUIZ</h1>
+  </div>
+  <div class="quizBox">
+    <p id="htmlquestion">what is html</p>
+    <ul id="htmlanswers">
+      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
+    </ul>
+  </div>
+  <div class="buttonBox">
+    <button id="htmlNext">NEXT</button>
+  </div>
+</section>
+<!-- ##################### CSS QUIZ ################### -->
+
+<section class="cssSection">
+  <div class="sectionHeading">
+    <h1>CSS QUIZ</h1>
+  </div>
+  <div class="quizBox">
+    <p id="cssquestion">what is html</p>
+    <ul id="cssanswers">
+      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
+    </ul>
+  </div>
+  <div class="buttonBox">
+    <button id="cssNext">NEXT</button>
+  </div>
+</section>
+
+<!-- ##################### JAVASCRIPT QUIZ ################### -->
+
+<section class="javascriptSection">
+  <div class="sectionHeading">
+    <h1>JAVASCRIPT QUIZ</h1>
+  </div>
+  <div class="quizBox">
+    <p id="javaquestion">what is html</p>
+    <ul id="javaanswers">
+      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
+    </ul>
+  </div>
+  <div class="buttonBox">
+    <button id="javaNext">NEXT</button>
+  </div>
+</section>
+
+<!-- ##################### PHP QUIZ ################### -->
+
+<section class="phpSection">
+  <div class="sectionHeading">
+    <h1>PHP QUIZ</h1>
+  </div>
+  <div class="quizBox">
+    <p id="phpquestion">what is html</p>
+    <ul id="phpanswers">
+      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
+    </ul>
+  </div>
+  <div class="buttonBox">
+    <button id="phpNext">NEXT</button>
+  </div>
+</section>
+
+<!-- ##################### PYTHON QUIZ ################### -->
+
+<section class="pythonSection">
+  <div class="sectionHeading">
+    <h1>PYTHON QUIZ</h1>
+  </div>
+  <div class="quizBox">
+    <p id="pyquestion">what is html</p>
+    <ul id="pyanswers">
+      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
+      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
+    </ul>
+  </div>
+  <div class="buttonBox">
+    <button id="pyNext">NEXT</button>
+  </div>
 </section>
 
 
 
-
-
-
-        <!-- ############### script file ##################### -->
-        <script src="./quizjs/quiz.js"></script>
-        <!-- ############### sweet alert library ############### -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- ############### script file ##################### -->
+    <script type="module" src="./quizjs/quiz.js"></script>
+    <!-- ############### sweet alert library ############### -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   </body>
 </html>

@@ -124,8 +124,7 @@ signup.addEventListener("click", (e) => {
 Save user Data 
 ############# */
 
-let saveUserDataArr = []; // Array to store user data
-
+ let saveUserDataArr = [];
 // Function to save data to local storage
 function saveToLocalStorage() {
   localStorage.setItem("Save", JSON.stringify(saveUserDataArr));
@@ -287,7 +286,7 @@ function userLogin() {
   let emailUserName = document.querySelector("#emailUserName").value.trim();
   let userPassword = document.querySelector("#password").value.trim();
 
-  let userFound = saveUserDataArr.some(
+ let userFound = saveUserDataArr.some(
     (data) =>
       (data.email === emailUserName || data.username === emailUserName) &&
       data.password === userPassword
@@ -297,7 +296,7 @@ function userLogin() {
     swal.fire("Login Successfull");
     setTimeout(() => {
       document.location.href = "quiz.html";
-    }, 1700);
+    }, 1800);
   } else {
     Swal.fire("Invalid email or password!");
   }
