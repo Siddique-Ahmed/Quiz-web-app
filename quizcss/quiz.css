@@ -25,11 +25,11 @@ body #loader{
   left: 50%;
   transform: translate(-50%,-50%);
   border-radius: 30px;
-  border-left: 2px dashed #fff;
-  border-right: 2px dashed #fff;
-  border-top: 2px dashed #fff;
-  border-bottom: 2px solid #000;
-  animation: loader 0.3s ease-in-out infinite;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #00000075;
+  border-bottom: 2px solid #fff;
+  animation: loader 0.8s ease-in-out infinite;
 }
 @keyframes loader {
   0%{
@@ -681,14 +681,39 @@ body #loader{
 
 /* ###################### media query ############################## */
 
-@media (max-width: 710px) {
+@media (max-width: 730px) {
+  body{
+    padding: 0;
+  }
   body #loader{
     display: none;
-    left: 46%;
-  }
-}
-@media (max-width: 380px) {
-  body #loader{
     left: 43%;
   }
+  .htmlSection .quizBox{
+    width: 80%;
+  }
+  .quizBox #htmlanswers{
+    padding: 10px 5px;
+  }
+  .quizBox #htmlanswers li{
+    font-size: 12px;
+  }
+  #htmlanswers li input{
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  body #loader{
+    left: 41%;
+  }
+  .htmlSection .quizBox{
+    width: 90%;
+  }
+  .htmlSection .buttonBox {
+    justify-content: center;
+  }
+  .htmlSection .buttonBox button{
+    width: 80%;
+  } 
 }
