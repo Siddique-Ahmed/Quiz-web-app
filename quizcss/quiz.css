@@ -48,8 +48,6 @@ body #loader{
   border-bottom: 1px solid #fff;
   align-items: center;
   padding: 10px 20px;
-  position: fixed;
-  z-index: 1000;
 }
 .navbar .logo,
 .navbar .login {
@@ -237,7 +235,7 @@ body #loader{
   min-height: 100vh;
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -262,6 +260,7 @@ body #loader{
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  margin: 40px 0;
 }
 .quizBox p {
   font-size: 20px;
@@ -269,7 +268,7 @@ body #loader{
   margin: 30px;
   font-weight: 700;
 }
-.quizBox ul {
+.quizBox #htmlanswers {
   border-top: 1px solid #ccc;
   width: 100%;
   align-self: flex-start;
@@ -278,19 +277,20 @@ body #loader{
   flex-direction: column;
   flex-wrap: wrap;
 }
-.quizBox ul li {
+.quizBox #htmlanswers li {
   list-style: none;
   width: 100%;
-  height: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   font-size: 16px;
   font-weight: 600;
-}
-.quizBox ul li:hover {
-  background: transparent;
+  padding: 20px 0;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
+}
+.quizBox #htmlanswers li:hover {
+  background-color: #ccc;
 }
 .quizBox ul li input {
   margin-right: 10px;
@@ -318,6 +318,70 @@ body #loader{
   color: #fff;
   border: 1px solid #fff;
 }
+.htmlSection .result{
+  width: 430px;
+  height: 230px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center   ;
+  flex-wrap: wrap;
+  animation: result 0.9s ease-in-out forwards;
+  transition: 0.5s ease-in;
+  margin: 40px 0;
+}
+.result h2{
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.result h5{
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.marks{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.marks p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.marks span{
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.result button{
+  width: 230px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.result button:hover{
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
 
 /* ####################### for css quiz ################### */
 
@@ -326,7 +390,7 @@ body #loader{
   min-height: 100vh;
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -342,7 +406,7 @@ body #loader{
   font-weight: 400;
 }
 
-.cssSection .quizBox {
+.cssSection .cssQuizBox {
   width: 50%;
   background: #fff;
   border: 1px solid #fff;
@@ -351,14 +415,15 @@ body #loader{
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  margin: 40px 0;
 }
-.quizBox p {
+.cssQuizBox p {
   font-size: 20px;
   font-weight: 400;
   margin: 30px;
   font-weight: 700;
 }
-.quizBox ul {
+.cssQuizBox ul {
   border-top: 1px solid #ccc;
   width: 100%;
   align-self: flex-start;
@@ -367,21 +432,22 @@ body #loader{
   flex-direction: column;
   flex-wrap: wrap;
 }
-.quizBox ul li {
+.cssQuizBox ul li {
   list-style: none;
   width: 100%;
-  height: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   font-size: 16px;
   font-weight: 600;
+  padding: 20px 0;
+  transition: .3s ease-in-out;
 }
-.quizBox ul li:hover {
-  background: transparent;
+.cssQuizBox ul li:hover {
+  background: #ccc;
   cursor: pointer;
 }
-.quizBox ul li input {
+.cssQuizBox ul li input {
   margin-right: 10px;
   cursor: pointer;
 }
@@ -407,6 +473,65 @@ body #loader{
   color: #fff;
   border: 1px solid #fff;
 }
+.cssSection .cssResult{
+  width: 50%;
+  height: 230px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center   ;
+  flex-wrap: wrap;
+  animation: result 0.9s ease-in-out forwards;
+  transition: 0.5s ease-in;
+  margin: 40px 0;
+}
+.cssResult h2{
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.cssResult h5{
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.marks p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.marks span{
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.cssResult button{
+  width: 230px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.cssResult button:hover{
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
 
 /* ####################### for javascript quiz ################### */
 
@@ -415,7 +540,7 @@ body #loader{
   min-height: 100vh;
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -431,7 +556,7 @@ body #loader{
   font-weight: 400;
 }
 
-.javascriptSection .quizBox {
+.javascriptSection .jsQuizBox {
   width: 50%;
   background: #fff;
   border: 1px solid #fff;
@@ -440,14 +565,15 @@ body #loader{
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  margin: 40px 0;
 }
-.quizBox p {
+.jsQuizBox p {
   font-size: 20px;
   font-weight: 400;
   margin: 30px;
   font-weight: 700;
 }
-.quizBox ul {
+.jsQuizBox ul {
   border-top: 1px solid #ccc;
   width: 100%;
   align-self: flex-start;
@@ -456,21 +582,22 @@ body #loader{
   flex-direction: column;
   flex-wrap: wrap;
 }
-.quizBox ul li {
+.jsQuizBox ul li {
   list-style: none;
   width: 100%;
-  height: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   font-size: 16px;
   font-weight: 600;
+  padding: 20px 0;
+  transition: 0.3s ease-in-out;
 }
-.quizBox ul li:hover {
-  background: transparent;
+.jsQuizBox ul li:hover {
+  background: #ccc;
   cursor: pointer;
 }
-.quizBox ul li input {
+.jsQuizBox ul li input {
   margin-right: 10px;
   cursor: pointer;
 }
@@ -496,6 +623,65 @@ body #loader{
   color: #fff;
   border: 1px solid #fff;
 }
+.javascriptSection .jsResult{
+  width: 50%;
+  height: 230px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: result 0.9s ease-in-out forwards;
+  transition: 0.5s ease-in;
+  margin: 40px 0;
+}
+.jsResult h2{
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.jsResult h5{
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.marks p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.marks span{
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.jsResult button{
+  width: 230px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.jsResult button:hover{
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
 /* ####################### for php quiz ################### */
 
 .phpSection {
@@ -503,9 +689,10 @@ body #loader{
   min-height: 100vh;
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 20px 0;
 }
 .phpSection .sectionHeading {
   width: 100%;
@@ -518,8 +705,7 @@ body #loader{
   color: #fff;
   font-weight: 400;
 }
-
-.phpSection .quizBox {
+.phpSection .phpQuizBox {
   width: 50%;
   background: #fff;
   border: 1px solid #fff;
@@ -528,14 +714,15 @@ body #loader{
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  margin: 40px 0;
 }
-.quizBox p {
+.phpQuizBox p {
   font-size: 20px;
   font-weight: 400;
   margin: 30px;
   font-weight: 700;
 }
-.quizBox ul {
+.phpQuizBox ul {
   border-top: 1px solid #ccc;
   width: 100%;
   align-self: flex-start;
@@ -544,21 +731,22 @@ body #loader{
   flex-direction: column;
   flex-wrap: wrap;
 }
-.quizBox ul li {
+.phpQuizBox ul li {
   list-style: none;
   width: 100%;
-  height: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   font-size: 16px;
   font-weight: 600;
+  padding: 20px 0;
+  transition: 0.3s ease-in-out;
 }
-.quizBox ul li:hover {
-  background: transparent;
+.phpQuizBox ul li:hover {
+  background: #ccc;
   cursor: pointer;
 }
-.quizBox ul li input {
+.phpQuizBox ul li input {
   margin-right: 10px;
   cursor: pointer;
 }
@@ -584,7 +772,65 @@ body #loader{
   color: #fff;
   border: 1px solid #fff;
 }
-
+.phpSection .phpResult{
+  width: 50%;
+  height: 230px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: result 0.9s ease-in-out forwards;
+  transition: 0.5s ease-in;
+  margin: 40px 0;
+}
+.phpResult h2{
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.phpResult h5{
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.marks p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.marks span{
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.phpResult button{
+  width: 230px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.phpResult button:hover{
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
 /* ####################### for python quiz ################### */
 
 .pythonSection {
@@ -592,9 +838,10 @@ body #loader{
   min-height: 100vh;
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 20px 0;
 }
 .pythonSection .sectionHeading {
   width: 100%;
@@ -608,7 +855,7 @@ body #loader{
   font-weight: 400;
 }
 
-.pythonSection .quizBox {
+.pythonSection .pyQuizBox {
   width: 50%;
   background: #fff;
   border: 1px solid #fff;
@@ -617,14 +864,15 @@ body #loader{
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  margin: 40px 0;
 }
-.quizBox p {
+.pyQuizBox p {
   font-size: 20px;
   font-weight: 400;
   margin: 30px;
   font-weight: 700;
 }
-.quizBox ul {
+.pyQuizBox ul {
   border-top: 1px solid #ccc;
   width: 100%;
   align-self: flex-start;
@@ -633,21 +881,22 @@ body #loader{
   flex-direction: column;
   flex-wrap: wrap;
 }
-.quizBox ul li {
+.pyQuizBox ul li {
   list-style: none;
   width: 100%;
-  height: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   font-size: 16px;
   font-weight: 600;
+  padding: 20px 0;
+  transition: 0.3s ease-in-out;
 }
-.quizBox ul li:hover {
-  background: transparent;
+.pyQuizBox ul li:hover {
+  background: #ccc;
   cursor: pointer;
 }
-.quizBox ul li input {
+.pyQuizBox ul li input {
   margin-right: 10px;
   cursor: pointer;
 }
@@ -673,10 +922,65 @@ body #loader{
   color: #fff;
   border: 1px solid #fff;
 }
-
-
-
-
+.pythonSection .pyResult{
+  width: 50%;
+  height: 230px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: result 0.9s ease-in-out forwards;
+  transition: 0.5s ease-in;
+  margin: 40px 0;
+}
+.pyResult h2{
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.pyResult h5{
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.marks p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+.marks span{
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.pyResult button{
+  width: 230px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.pyResult button:hover{
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
 
 
 /* ###################### media query ############################## */
@@ -689,17 +993,126 @@ body #loader{
     display: none;
     left: 43%;
   }
+  /* ############# html section ############# */
   .htmlSection .quizBox{
     width: 80%;
+  }
+  .htmlSection .result{
+    width: 290px;
+  }
+  .htmlSection .result h5{
+    font-size: 13px;
+  }
+  .result .marks{
+    flex-direction: column;
+    align-items: center;
+  }
+  .result p{
+    font-size: 12px;
+    margin-bottom: 10px;
   }
   .quizBox #htmlanswers{
     padding: 10px 5px;
   }
   .quizBox #htmlanswers li{
-    font-size: 12px;
+    font-size: 14px;
   }
   #htmlanswers li input{
     margin-right: 5px;
+  }
+  /* ############## css section ################ */
+  .cssSection .cssQuizBox {
+    width: 80%;
+  }
+  .cssSection .cssResult{
+    width: 290px;
+  }
+  .cssResult h5{
+    font-size: 13px;
+  }
+  .cssResult .marks{
+    flex-direction: column;
+    align-items: center;
+  }
+  .cssResult .marks p{
+    margin-bottom: 10px;
+  }
+  /* ####### javascript Section ############### */
+  .javascriptSection .jsQuizBox{
+    width: 80%;
+  }
+  .javascriptSection .sectionHeading h1{
+    font-size: 30px;
+  }
+  .jsQuizBox p{
+    font-size: 18px;
+  }
+  .javascriptSection .jsResult{
+    width: 80%;
+  }
+  .jsResult h5{
+    font-size: 13px;
+  }
+  .jsResult .marks{
+    flex-direction: column;
+    align-items: center;
+  }
+  .jsResult .marks p{
+    margin-bottom: 10px;
+  }
+  /* ################ php Section ################### */
+  .phpSection .phpQuizBox{
+    width: 80%;
+  }
+  .phpSection .sectionHeading h1{
+    font-size: 30px;
+  }
+  .phpQuizBox p{
+    font-size: 18px;
+  }
+  .phpSection .phpResult{
+    width: 80%;
+  }
+  .phpResult h5{
+    font-size: 13px;
+  }
+  .phpResult .marks{
+    flex-direction: column;
+    align-items: center;
+  }
+  .phpResult .marks p{
+    margin-bottom: 10px;
+  }
+  /* ####################### python section ################## */
+  .pythonSection .pyQuizBox{
+    width: 80%;
+  }
+  .pythonSection .sectionHeading h1{
+    font-size: 30px;
+  }
+  .pyQuizBox p{
+    font-size: 18px;
+  }
+  .pythonSection .pyResult{
+    width: 80%;
+  }
+  .pyResult h5{
+    font-size: 13px;
+  }
+  .pyResult .marks{
+    flex-direction: column;
+    align-items: center;
+  }
+  .pyResult .marks p{
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 515px) {
+  
+  .jsQuizBox label{
+    font-size: 13px;
   }
 }
 
@@ -707,6 +1120,7 @@ body #loader{
   body #loader{
     left: 41%;
   }
+  /* ######## html section ######### */
   .htmlSection .quizBox{
     width: 90%;
   }
@@ -715,5 +1129,81 @@ body #loader{
   }
   .htmlSection .buttonBox button{
     width: 80%;
-  } 
+  }
+  /* ############ css section ########### */
+  .cssSection .cssQuizBox{
+    width: 90%;
+  }
+  .cssSection .buttonBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cssSection .buttonBox button{
+    width: 90%;
+  }
+  /* ########### javascript Section #################### */
+  .javascriptSection .jsQuizBox {
+    width: 90%;
+  }
+  .javascriptSection .sectionHeading h1{
+    font-size: 25px;
+  }
+  .jsQuizBox p{
+    font-size: 15px;
+  }
+  .javascriptSection .buttonBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .javascriptSection .buttonBox button{
+    width: 80%;
+  }
+  /* ############ php Section ################ */
+
+  .phpSection .phpQuizBox {
+    width: 90%;
+  }
+  .phpSection .sectionHeading h1{
+    font-size: 25px;
+  }
+  .phpQuizBox p{
+    font-size: 15px;
+  }
+  .phpSection .buttonBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .phpSection .buttonBox button{
+    width: 80%;
+  }
+  /* #################### python Section ################ */
+
+  .pythonSection .pyQuizBox {
+    width: 90%;
+  }
+  .pythonSection .sectionHeading h1{
+    font-size: 25px;
+  }
+  .pyQuizBox p{
+    font-size: 15px;
+  }
+  .pythonSection .buttonBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .pythonSection .buttonBox button{
+    width: 80%;
+  }
+  .pythonSection .pyResult button{
+    width: 80%;
+  }
 }

@@ -45,121 +45,217 @@
         <button id="PYTHON">PYTHON</button>
       </div>
     </section>
-<!-- ##################### HTML QUIZ ################### -->
+    <!-- ##################### HTML QUIZ ################### -->
 
-<section class="htmlSection">
-  <div class="sectionHeading">
-    <h1>HTML QUIZ</h1>
-  </div>
-  <div class="quizBox">
-    <p id="htmlquestion">what is html</p>
+    <section class="htmlSection">
+      <div class="sectionHeading">
+        <h1>HTML QUIZ</h1>
+      </div>
+      <div class="quizBox">
+        <p id="htmlquestion">what is html</p>
 
+        <ul id="htmlanswers">
+          <li>
+            <input type="radio" class="answer" name="quizOption" id="optionA" />
+            <label id="textOptionA" for="optionA">Option A</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="quizOption" id="optionB" />
+            <label id="textOptionB" for="optionB">Option B</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="quizOption" id="optionC" />
+            <label id="textOptionC" for="optionC">Option C</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="quizOption" id="optionD" />
+            <label id="textOptionD" for="optionD">Option D</label>
+          </li>
+        </ul>
+      </div>
+      <div class="result">
+        <h2>Result</h2>
+        <h5 id="greet">Congratulation You are passed</h5>
 
-  <ul id="htmlanswers">
-    <li>
-      <input type="radio" class="answer" name="quizOption" id="optionA" />
-      <label id="textOptionA" for="optionA">Option A</label>
-    </li>
-    <li>
-      <input type="radio" class="answer" name="quizOption" id="optionB" />
-      <label id="textOptionB" for="optionB">Option B</label>
-    </li>
-    <li>
-      <input type="radio" class="answer" name="quizOption" id="optionC" />
-      <label id="textOptionC" for="optionC">Option C</label>
-    </li>
-    <li>
-      <input type="radio" class="answer" name="quizOption" id="optionD" />
-      <label id="textOptionD" for="optionD">Option D</label>
-    </li>
-  </ul>
-  </div>
-  <div class="buttonBox">
-    <button id="Next">NEXT</button>
-  </div>
-</section>
+        <div class="marks">
+          <p id="totalMarks">Total Marks : <span>10</span></p>
+          <p id="obtainedMarks">Obtained Marks : <span>10</span></p>
+        </div>
+        <button id="backSelect">Back</button>
+      </div>
+      <div class="buttonBox">
+        <button id="Next">NEXT</button>
+      </div>
+    </section>
 
-<!-- ##################### CSS QUIZ ################### -->
+    <!-- ##################### CSS QUIZ ################### -->
 
-<section class="cssSection">
-  <div class="sectionHeading">
-    <h1>CSS QUIZ</h1>
-  </div>
-  <div class="quizBox">
-    <p id="cssquestion">what is html</p>
-    <ul id="cssanswers">
-      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
-    </ul>
-  </div>
-  <div class="buttonBox">
-    <button id="cssNext">NEXT</button>
-  </div>
-</section>
+    <section class="cssSection">
+      <div class="sectionHeading">
+        <h1>CSS QUIZ</h1>
+      </div>
+      <div class="cssQuizBox">
+        <p id="cssQuestion">what is html</p>
 
-<!-- ##################### JAVASCRIPT QUIZ ################### -->
+        <ul id="CssAnswers">
+          <li>
+            <input type="radio" name="cssQuizOption" id="cssOptionA" />
+            <label id="cssTextOptionA" for="cssOptionA">Option A</label>
+          </li>
+          <li>
+            <input type="radio" name="cssQuizOption" id="cssOptionB" />
+            <label id="cssTextOptionB" for="cssOptionB">Option B</label>
+          </li>
+          <li>
+            <input type="radio" name="cssQuizOption" id="cssOptionC" />
+            <label id="cssTextOptionC" for="cssOptionC">Option C</label>
+          </li>
+          <li>
+            <input type="radio" name="cssQuizOption" id="cssOptionD" />
+            <label id="cssTextOptionD" for="cssOptionD">Option D</label>
+          </li>
+        </ul>
+      </div>
+      <div class="buttonBox">
+        <button id="cssNext">NEXT</button>
+      </div>
+      <div class="cssResult">
+        <h2>Result</h2>
+        <h5 id="cssGreet">Congratulation You are passed</h5>
 
-<section class="javascriptSection">
-  <div class="sectionHeading">
-    <h1>JAVASCRIPT QUIZ</h1>
-  </div>
-  <div class="quizBox">
-    <p id="javaquestion">what is html</p>
-    <ul id="javaanswers">
-      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
-    </ul>
-  </div>
-  <div class="buttonBox">
-    <button id="javaNext">NEXT</button>
-  </div>
-</section>
+        <div class="marks">
+          <p id="cssTotalMarks">Total Marks : <span>10</span></p>
+          <p id="cssObtainedMarks">Obtained Marks : <span>10</span></p>
+        </div>
+        <button id="cssBack">Back</button>
+      </div>
+    </section>
 
-<!-- ##################### PHP QUIZ ################### -->
+    <!-- ##################### JAVASCRIPT QUIZ ################### -->
 
-<section class="phpSection">
-  <div class="sectionHeading">
-    <h1>PHP QUIZ</h1>
-  </div>
-  <div class="quizBox">
-    <p id="phpquestion">what is html</p>
-    <ul id="phpanswers">
-      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
-    </ul>
-  </div>
-  <div class="buttonBox">
-    <button id="phpNext">NEXT</button>
-  </div>
-</section>
+    <section class="javascriptSection">
+      <div class="sectionHeading">
+        <h1>JAVASCRIPT QUIZ</h1>
+      </div>
+      <div class="jsQuizBox">
+        <p id="jsquestion">what is html</p>
+        <ul id="javascriptAnswers">
+          <li>
+            <input type="radio" name="javascriptQuizOption" id="javascriptOptionA" />
+            <label id="jsTextOptionA" for="javascriptOptionA">Option A</label>
+          </li>
+          <li>
+            <input type="radio" name="javascriptQuizOption" id="javascriptOptionB" />
+            <label id="jsTextOptionB" for="javascriptOptionB">Option B</label>
+          </li>
+          <li>
+            <input type="radio" name="javascriptQuizOption" id="javascriptOptionC" />
+            <label id="jsTextOptionC" for="javascriptOptionC">Option C</label>
+          </li>
+          <li>
+            <input type="radio" name="javascriptQuizOption" id="javascriptOptionD" />
+            <label id="jsTextOptionD" for="javascriptOptionD">Option D</label>
+          </li>
+        </ul>
+      </div>
+      <div class="buttonBox">
+        <button id="jsNext">NEXT</button>
+      </div>
+      <div class="jsResult">
+        <h2>Result</h2>
+        <h5 id="jsGreet">Congratulation You are passed</h5>
 
-<!-- ##################### PYTHON QUIZ ################### -->
+        <div class="marks">
+          <p id="jsTotalMarks">Total Marks : <span>10</span></p>
+          <p id="jsObtainedMarks">Obtained Marks : <span>10</span></p>
+        </div>
+        <button id="jsBack">Back</button>
+      </div>
+    </section>
 
-<section class="pythonSection">
-  <div class="sectionHeading">
-    <h1>PYTHON QUIZ</h1>
-  </div>
-  <div class="quizBox">
-    <p id="pyquestion">what is html</p>
-    <ul id="pyanswers">
-      <li><input type="radio" name="quiz" class="check">asnwer 1</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 2</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 3</li>
-      <li><input type="radio" name="quiz" class="check">asnwer 4</li>
-    </ul>
-  </div>
-  <div class="buttonBox">
-    <button id="pyNext">NEXT</button>
-  </div>
-</section>
+    <!-- ##################### PHP QUIZ ################### -->
 
+    <section class="phpSection">
+      <div class="sectionHeading">
+        <h1>PHP QUIZ</h1>
+      </div>
+      <div class="phpQuizBox">
+        <p id="phpquestion">what is html</p>
+        <ul id="phpAnswers">
+          <li>
+            <input type="radio" class="answer" name="phpquizOption" id="phpoptionA" />
+            <label id="phpTextOptionA" for="phpoptionA">Option A</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="phpquizOption" id="phpoptionB" />
+            <label id="phpTextOptionB" for="phpoptionB">Option B</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="phpquizOption" id="phpoptionC" />
+            <label id="phpTextOptionC" for="phpoptionC">Option C</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="phpquizOption" id="phpoptionD" />
+            <label id="phpTextOptionD" for="phpoptionD">Option D</label>
+          </li>
+        </ul>
+      </div>
+      <div class="buttonBox">
+        <button id="phpNext">NEXT</button>
+      </div>
+      <div class="phpResult">
+        <h2>Result</h2>
+        <h5 id="phpGreet">Congratulation You are passed</h5>
 
+        <div class="marks">
+          <p id="phpTotalMarks">Total Marks : <span>10</span></p>
+          <p id="phpObtainedMarks">Obtained Marks : <span>10</span></p>
+        </div>
+        <button id="phpBack">Back</button>
+      </div>
+    </section>
+
+    <!-- ##################### PYTHON QUIZ ################### -->
+
+    <section class="pythonSection">
+      <div class="sectionHeading">
+        <h1>PYTHON QUIZ</h1>
+      </div>
+      <div class="pyQuizBox">
+        <p id="pyquestion">what is html</p>
+        <ul id="phpAnswers">
+          <li>
+            <input type="radio" class="answer" name="pyquizOption" id="pyoptionA" />
+            <label id="pyTextOptionA" for="pyoptionA">Option A</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="pyquizOption" id="pyoptionB" />
+            <label id="pyTextOptionB" for="pyoptionB">Option B</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="pyquizOption" id="pyoptionC" />
+            <label id="pyTextOptionC" for="pyoptionC">Option C</label>
+          </li>
+          <li>
+            <input type="radio" class="answer" name="pyquizOption" id="pyoptionD" />
+            <label id="pyTextOptionD" for="pyoptionD">Option D</label>
+          </li>
+        </ul>
+      </div>
+      <div class="buttonBox">
+        <button id="pyNext">NEXT</button>
+      </div>
+      <div class="pyResult">
+        <h2>Result</h2>
+        <h5 id="pyGreet">Congratulation You are passed</h5>
+
+        <div class="marks">
+          <p id="pyTotalMarks">Total Marks : <span>10</span></p>
+          <p id="pyObtainedMarks">Obtained Marks : <span>10</span></p>
+        </div>
+        <button id="pyBack">Back</button>
+      </div>
+    </section>
 
     <!-- ############### script file ##################### -->
     <script type="module" src="./quizjs/quiz.js"></script>
