@@ -330,7 +330,7 @@ function cssPage() {
   selectSection.style.display = "none";
 }
 
-// ############# HTML QUESTION ANSWER ############## \\
+// ############# CSS QUESTION ANSWER ############## \\
 
 const cssQuiz = [
   {
@@ -518,7 +518,7 @@ let cssGreeting = document.querySelector("#cssGreet");
 let cssTotalMarks = document.querySelector("#cssTotalMarks span");
 let cssObtainedMarks = document.querySelector("#cssObtainedMarks span");
 let cssQuizBox = document.querySelector(".cssQuizBox");
-let cssBackSelect = document.querySelector("#backSelect");
+let cssBackSelect = document.querySelector("#cssBack");
 
 function cssLoadQuestion() {
   cssQuestion.textContent = cssQuiz[cssCurrentQuestion].question;
@@ -530,12 +530,12 @@ function cssLoadQuestion() {
 
 cssBackSelect.addEventListener("click",(e)=>{
   e.preventDefault();
+  cssSection.style.display = "none";
   loader.style.display = "flex";
   setTimeout(() => {
     selectSection.style.display = "flex";
     loader.style.display = "none";
   }, 1000);
-  cssSection.style.display = "none";
 })
 
 function cssShowResult() {
@@ -1397,3 +1397,17 @@ pyNext.addEventListener("click", () => {
     pyShowResult();
   }
 });
+
+// ####################for profile pic display ############################# \\
+
+let getData = localStorage.getItem("Save");
+let Data = JSON.parse(getData);
+
+if (Data) {
+    const container = document.querySelector('.login .profile-pic');
+    Data.forEach(item => {
+        const imgElement = document.createElement('img');
+        imgElement.src = item.profilePic;
+        container.appendChild(imgElement);
+    });
+}

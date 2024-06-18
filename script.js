@@ -137,7 +137,7 @@ function loadFromLocalStorage() {
     saveUserDataArr = JSON.parse(retrievedData);
   }
 }
-loadFromLocalStorage(); // Load existing data from local storage on page load
+loadFromLocalStorage(); 
 
 // Function to validate and handle signup form submission
 function SignupFormValidation() {
